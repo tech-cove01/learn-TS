@@ -45,3 +45,33 @@ function log(msg: string): void {
 // 输出
 log("你好，" + userName + "，你今年 " + age + " 岁");
 log("number 在 TS 中一个类型通吃整数和浮点数：" + num);
+
+// ============================================================
+// 以下为【常见问题补充示例】，用 npm run 01 就能看到输出
+// ============================================================
+
+// ---------- 问题：let 之外，还有哪些声明变量的方式 ----------
+// let   可重新赋值（Java 的普通变量）
+// const 不可重新赋值（Java 的 final）
+// var   旧式变量（有坑，现代代码不用）
+
+let count = 0; // 要 ++，必须用 let
+count++;
+log("let 可重新赋值，count = " + count);
+
+const appName = "学习项目"; // 常量，不能改
+log("const 常量 appName = " + appName);
+// appName = "改名";  // ❌ 报错：const 不能重新赋值
+
+var oldVar = "旧式变量"; // 尽量不用
+log("var 是旧式写法（不推荐）：" + oldVar);
+
+// 实际开发习惯：默认用 const，需要重新赋值时才用 let
+const fixedUrl = "https://api.example.com"; // 不会变 -> const
+let total = 0;                              // 要累加 -> let
+
+// 注意：const 只锁"引用"，对象的内部属性仍可改（和 Java 的 final 引用一致）
+const userInfo = { name: "小明", age: 25 };
+userInfo.age = 26;       // ✅ 属性可以改
+log("const 对象属性仍可改，userInfo.age = " + userInfo.age);
+// userInfo = { name: "x" };  // ❌ 报错：userInfo 这个引用不能变
