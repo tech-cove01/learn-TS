@@ -1,0 +1,23 @@
+{
+  "name": "ts-learning",
+  "version": "1.0.0",
+  "description": "TypeScript 学习项目：从 Java 背景出发，从入门到进阶",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "npm run build && node dist/01-basics/hello.js",
+    "01": "npm run build && node dist/01-basics/01-hello.js",
+    "02": "npm run build && node dist/01-basics/02-types.js",
+    "03": "npm run build && node dist/02-advanced/03-structural.js",
+    "04": "npm run build && node dist/02-advanced/04-narrowing.js",
+    "05": "npm run build && node dist/03-generics/05-generics.js",
+    "06": "npm run build && node dist/03-generics/06-type-operators.js",
+    "07": "npm run build",
+    "08": "npm run build && node dist/05-framework/08-vue3.js",
+    "09": "npm run build && node dist/05-framework/09-react.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  }
+}
