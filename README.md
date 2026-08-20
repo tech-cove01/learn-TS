@@ -1,7 +1,5 @@
 # TypeScript 学习项目
 
-> 面向有 Java 后端基础 + Python 经验的学习者，从浅入深学 TS 前端。
-
 ## 环境要求
 - Node.js v24+（已安装）
 - npm（已安装）
